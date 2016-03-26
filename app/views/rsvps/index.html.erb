@@ -4,6 +4,27 @@
 
   <h1>RVSP List</h1>
 
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="list-unstyled">
+        <li><strong><%= @all_day.count %></strong> all-day guests</li>
+        <li><strong><%= @night_only.count %></strong> evening-only guests</li>
+        <li><strong><%= @not_coming.count %></strong> not coming</li>
+      </ul>
+    </div>
+
+    <div class="col-sm-4">
+      <ul class="list-unstyled">
+        <li><strong><%= @rsvps.count %></strong> replies</li>
+        <li><strong><%= @guests %></strong> guests</li>
+        <li><strong><%= @total %></strong> total people are coming</li>
+      </ul>
+    </div>
+
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4"></div>
+  </div>
+
   <table class="table table-striped">
     <thead>
       <tr>
