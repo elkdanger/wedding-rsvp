@@ -15,3 +15,11 @@
 
 #rsvp-container {
   margin-top: 50px; }
+
+table tr.highlight {
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+  background: yellow !important; }

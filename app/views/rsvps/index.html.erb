@@ -7,9 +7,9 @@
   <div class="row">
     <div class="col-sm-4">
       <ul class="list-unstyled">
-        <li><strong><%= @all_day.count %></strong> all-day guests</li>
-        <li><strong><%= @night_only.count %></strong> evening-only guests</li>
-        <li><strong><%= @not_coming.count %></strong> not coming</li>
+        <li><strong><%= @all_day.count %></strong> all-day guests <a id="show-all-day" href="#"><i class="fa fa-search"></i></a> </li>
+        <li><strong><%= @night_only.count %></strong> evening-only guests <a id="show-evening" href="#"><i class="fa fa-search"></i></a></li>
+      <li><strong><%= @not_coming.count %></strong> not coming <a id="show-not-coming" href="#"><i class="fa fa-search"></i></a></li>
       </ul>
     </div>
 
@@ -54,3 +54,6 @@
     </tbody>
   </table>
 </div>
+
+<script src="/theme/plugins/jquery-1.11.3.min.js"></script>
+<script src="/js/rsvps.js"></script>

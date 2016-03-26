@@ -4,6 +4,15 @@ $header-height: 50px;
   margin-top: $header-height;
 }
 
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+
+}
+
 #venue-info {
 
     .venue-image {
@@ -29,4 +38,11 @@ $header-height: 50px;
 
 #rsvp-container {
   @include clear-header();
+}
+
+table {
+  tr.highlight {
+    @include transition(background .5s ease)
+    background: yellow!important;
+  }
 }
