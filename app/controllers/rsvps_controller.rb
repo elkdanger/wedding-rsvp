@@ -3,7 +3,7 @@ class RsvpsController < ApplicationController
   # GET /rsvps
   # GET /rsvps.json
   def index
-    @rsvps = Rsvp.all
+    @rsvps = Rsvp.order(:name)
   end
 
   # POST /rsvps
@@ -19,7 +19,7 @@ class RsvpsController < ApplicationController
   end
 
   private
-  
+
     def rsvp_params
       params.require(:rsvp).permit(:name, :email, :phone, :events, :guests, :guestinfo, :message)
     end

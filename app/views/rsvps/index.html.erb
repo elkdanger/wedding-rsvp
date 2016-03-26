@@ -1,32 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Rsvps</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Events</th>
-      <th>Guests</th>
-      <th>Guestinfo</th>
-      <th>Message</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>RVSP List</h1>
 
-  <tbody>
-    <% @rsvps.each do |rsvp| %>
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= rsvp.name %></td>
-        <td><%= rsvp.email %></td>
-        <td><%= rsvp.phone %></td>
-        <td><%= rsvp.events %></td>
-        <td><%= rsvp.guests %></td>
-        <td><%= rsvp.guestinfo %></td>
-        <td><%= rsvp.message %></td>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Events</th>
+        <th>Guests</th>
+        <th>Guestinfo</th>
+        <th>Message</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @rsvps.each do |rsvp| %>
+        <tr>
+          <td><%= rsvp.name %></td>
+          <td><%= rsvp.email %></td>
+          <td><%= rsvp.phone %></td>
+          <td><%= rsvp.events %></td>
+          <td><%= rsvp.guests %></td>
+          <td><%= rsvp.guestinfo %></td>
+          <td><%= rsvp.message %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
