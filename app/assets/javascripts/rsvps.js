@@ -37,3 +37,14 @@ $('#show-not-coming').click(e => {
   }).toggleClass('highlight')
 
 })
+
+$('#show-guests').click(e => {
+  e.preventDefault()
+
+  removeHighlight()
+
+  $('tr').filter(function(index) {
+    return $(this).find('td:nth-child(5):not(:contains(0))').length > 0
+  }).toggleClass('highlight')
+
+})

@@ -16,7 +16,7 @@
     <div class="col-sm-4">
       <ul class="list-unstyled">
         <li><strong><%= @rsvps.count %></strong> replies</li>
-        <li><strong><%= @guests %></strong> guests</li>
+        <li><strong><%= @guests %></strong> guests <a id="show-guests" href="#"><i class="fa fa-search"></i></a></li>
         <li><strong><%= @total %></strong> total people are coming</li>
       </ul>
     </div>
@@ -47,7 +47,7 @@
           <td><%= rsvp.phone %></td>
           <td><%= rsvp.events %></td>
           <td><%= rsvp.guests %></td>
-          <td><%= rsvp.guestinfo %></td>
+          <td><%= rsvp.guestinfo == '0' ? '' : rsvp.guestinfo %></td>
           <td><%= rsvp.message %></td>
         </tr>
       <% end %>
