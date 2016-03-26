@@ -1,3 +1,9 @@
+$header-height: 50px;
+
+@mixin clear-header() {
+  margin-top: $header-height;
+}
+
 #venue-info {
 
     .venue-image {
@@ -19,4 +25,8 @@
     display: block;
     margin: 0 auto;
     max-width: 300px;
+}
+
+#rsvp-container {
+  @include clear-header();
 }
