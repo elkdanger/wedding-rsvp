@@ -11,10 +11,8 @@ class RsvpsController < ApplicationController
   def create
     @rsvp = Rsvp.new(rsvp_params)
     if @rsvp.save
-
       RsvpMailer.notification(@rsvp).deliver_later
-
-      flash[:success] = "We have received you RSVP thank you!"
+      flash[:success] = "We have received your RSVP - thank you!"
     else
       flash[:warning] = "There was a problem with your RSVP, please try again"
     end
