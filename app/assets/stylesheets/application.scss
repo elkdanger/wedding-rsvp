@@ -44,5 +44,17 @@ table {
   tr.highlight {
     @include transition(background .5s ease)
     background: yellow!important;
+
+  }
+}
+
+.flash-container {
+  width: 95%;
+  position: fixed;
+
+  .alert {
+    -webkit-box-shadow: 4px 4px 14px -1px rgba(0,0,0,0.36);
+    -moz-box-shadow: 4px 4px 14px -1px rgba(0,0,0,0.36);
+    box-shadow: 4px 4px 14px -1px rgba(0,0,0,0.36);
   }
 }
