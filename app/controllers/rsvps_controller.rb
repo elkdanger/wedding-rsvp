@@ -14,7 +14,7 @@ class RsvpsController < ApplicationController
     @night_only = @rsvps.select {|x| x.events == "Evening Only" }
     @not_coming = @rsvps.select { |x| x.events == "Sorry, can't make it" }
 
-    @guests = @rsvps.map { |x| x.guests }.reduce(:+)
+    @guests = @rsvps.map { |x| x.guests }.select { |x| x != nil? }.reduce(:+)
     @total = @rsvps.count + @guests - @not_coming.count
 
   end
