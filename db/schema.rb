@@ -13,19 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160314223104) do
 
-  create_table "guest_details", force: :cascade do |t|
-    t.boolean  "attending"
-    t.string   "guest_1_name"
-    t.string   "guest_2_name"
-    t.integer  "children"
-    t.string   "dietary_reqs"
-    t.string   "email"
-    t.string   "phone"
-    t.string   "comments"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "rsvps", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
