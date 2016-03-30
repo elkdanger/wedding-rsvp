@@ -19,5 +19,8 @@
 node_modules
 .DS_Store
 
+# .env config files
+.env
+
 # smtp config
 config/smtp.yml

@@ -3,6 +3,11 @@ class RsvpsController < ApplicationController
   # GET /rsvps
   # GET /rsvps.json
   def index
+    if session[:logged_in].nil?
+      redirect_to '/login'
+      return
+    end
+
     @rsvps = Rsvp.order(:name)
 
     @all_day = @rsvps.select {|x| x.events == "Daytime and Evening" }

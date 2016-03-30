@@ -1,0 +1,28 @@
+
+<div id="login-page">
+
+  <h3 class="text-center title">Wedding RSVP Login</h3>
+
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+
+      <%= form_tag '/login' do  %>
+
+        <div class="form-group">
+          <div class="input-group">
+            <%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Enter the password to log in', required: '' %>
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-default">log in</button>
+            </span>
+          </div>
+        </div>
+
+      <% end %>
+
+      <p class="text-center">
+        <%= link_to 'Back to the site', controller: 'home', action: 'index' %>
+      </p>
+
+    </div>
+  </div>
+</div>

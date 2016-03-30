@@ -4,6 +4,16 @@
 #venue-info h2 {
   margin-top: 0px; }
 
+#admin-page {
+  padding-top: 10px; }
+
+#login-page {
+  margin-top: 70px; }
+  #login-page .title {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 1.5em; }
+
 .wedding-col {
   padding-top: 10px;
   padding-bottom: 10px; }
