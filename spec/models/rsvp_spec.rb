@@ -7,6 +7,7 @@ describe Rsvp, :type => :model do
     it { should validate_presence_of :phone }
     it { should validate_presence_of :events }
     it { should validate_presence_of :guests }
+    it { should validate_presence_of :email }
   end
 
 end
