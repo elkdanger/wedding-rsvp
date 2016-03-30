@@ -14,3 +14,6 @@ deploy:
 addons:
   code_climate:
     repo_token: d429a55f65eb0e6fe54bd2ded64304618161f7bfbbf514ddd2b09da9bc3e7ddc
+
+env:
+  - ADMIN_PASSWORD=password
