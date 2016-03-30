@@ -17,14 +17,12 @@ RSpec.describe LoginController, type: :controller do
 
     context 'given valid data' do
 
-      let (:valid_password) { 'dummy' }
-
       before do
-        post :do_login, { password: :valid_password }
+        post :do_login, { password: 'password' }
       end
 
       it 'should redirect to the admin page' do
-        expect(response).to redirect_to '/admin'
+        expect(response).to redirect_to '/rsvps'
       end
 
       it 'should set the logged in session' do
@@ -35,10 +33,8 @@ RSpec.describe LoginController, type: :controller do
 
     context 'given invalid data' do
 
-      let (:invalid_password) { 'invalid password' }
-
       it 'should render the index template with errors' do
-        post :do_login, { password: :invalid_password }
+        post :do_login, { password: 'invalid_password' }
         expect(response).to render_template 'index'
       end
 

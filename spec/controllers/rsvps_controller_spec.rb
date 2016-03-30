@@ -37,6 +37,16 @@ RSpec.describe RsvpsController, type: :controller do
 
   describe "GET #index" do
 
+    before(:each) do
+      session[:logged_in] = true
+    end
+
+    it "redirects to the login page if not logged in" do
+      session[:logged_in] = nil
+      get :index
+      expect(response).to redirect_to '/login'
+    end
+
     it "assigns all rsvps as @rsvps" do
       rsvp = Rsvp.create! valid_attributes
       get :index, {}, valid_session
