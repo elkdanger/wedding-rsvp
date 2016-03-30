@@ -7,7 +7,7 @@ class LoginController < ApplicationController
 
     params.require(:password)
 
-    if params[:password] == 'dummy'
+    if params[:password] == ENV['ADMIN_PASSWORD']
       log_in
       redirect_to '/rsvps'
     else
