@@ -28,18 +28,18 @@ let bundleOptions = {
 }
 
 function bundleFile(file) {
-    
+
     let bundler = watchify(browserify({
         entries: [`app/assets/javascripts/${file}.js`],
         debug: true
     }))
-    
+
     bundler.transform(babelify)
-    
+
     bundler.on('update', () => {
         gutil.log(`Bundling ${file}.js..`)
         bundle()
-    })	
+    })
 
     return bundler.bundle()
         .on('error', gutil.log.bind(gutil, 'Browserify error'))
@@ -47,9 +47,9 @@ function bundleFile(file) {
         .pipe(gulp.dest('public/js'))
 }
 
-function bundle() {    
-    let files = ['app']
-    
+function bundle() {
+    let files = ['app', 'rsvps']
+
     files.forEach(bundleFile)
 }
 
@@ -59,16 +59,16 @@ gulp.task('bundle', bundle)
  * Sass
  */
 
-gulp.task('sass', () => 
+gulp.task('sass', () =>
     gulp.src('app/assets/stylesheets/*.scss')
         .pipe(plugins.sass().on('error', plugins.sass.logError))
         .pipe(gulp.dest('public/css'))
         .pipe(browserSync.stream())
 )
 
-gulp.task('sass:watch', () => 
+gulp.task('sass:watch', () =>
     gulp.watch('app/assets/stylesheets/*.scss', ['sass']))
-    
+
 /**
  * BrowserSync
  */
@@ -81,10 +81,10 @@ gulp.task('browser-sync', () => {
             port: 3002
         }
     })
-    
+
     gulp.watch('public/js/*.js', reload)
     gulp.watch('public/theme/**/*.js', reload)
-    
+
     gulp.watch('app/views/**/*.html.erb').on('change', reload)
 })
 
@@ -93,17 +93,17 @@ gulp.task('browser-sync', () => {
  * - copies bootstrap assets
  */
 gulp.task('copy', () => {
-    
+
     gulp.src('node_modules/bootstrap/dist/**/*.*')
         .pipe(gulp.dest(paths.vendor.bootstrap))
-    
+
 })
 
 gulp.task('clean', (done) => {
-    
+
     gutil.log('Removing bootstrap')
     rimraf(paths.vendor.bootstrap, {}, done)
-    
+
 })
 
 gulp.task('build', ['copy'])

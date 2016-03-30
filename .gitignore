@@ -21,3 +21,6 @@ node_modules
 
 # .env config files
 .env
+
+# smtp config
+config/smtp.yml

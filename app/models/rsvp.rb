@@ -4,5 +4,5 @@ class Rsvp < ActiveRecord::Base
   validates :phone, presence: true
   validates :events, presence: true
   validates :guests, presence: true
-
+  validates :email, presence: true
 end
