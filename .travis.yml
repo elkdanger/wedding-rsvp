@@ -6,7 +6,7 @@ deploy:
   provider: heroku
   app: hobbs-wedding-rsvp
   run:
-    - "rake db:setup"
+    - "rake db:migrate"
   api_key:
     secure: "bbfea3af-8203-4fc6-a424-5c49b6d2ead1"
   skip_cleanup: true
