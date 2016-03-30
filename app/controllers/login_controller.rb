@@ -4,10 +4,14 @@ class LoginController < ApplicationController
   end
 
   def do_login
-    if params[:password] = 'dummy'
+
+    params.require(:password)
+
+    if params[:password] == 'dummy'
       log_in
-      redirect_to '/admin'
+      redirect_to '/rsvps'
     else
+      flash[:danger] = 'Wrong password - try again!'
       render 'index'
     end
   end

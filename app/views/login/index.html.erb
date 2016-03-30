@@ -6,11 +6,11 @@
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
 
-      <%= form_for :do_login do |f| %>
+      <%= form_tag '/login' do  %>
 
         <div class="form-group">
           <div class="input-group">
-            <%= f.password_field :password, class: 'form-control', placeholder: 'Enter the password to log in' %>
+            <%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Enter the password to log in', required: '' %>
             <span class="input-group-btn">
               <button type="submit" class="btn btn-default">log in</button>
             </span>
