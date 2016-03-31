@@ -17,3 +17,4 @@ addons:
 
 env:
   - ADMIN_PASSWORD=password
+  - RECIPIENTS=jim@bob.com
