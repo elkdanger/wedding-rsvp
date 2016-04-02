@@ -21,8 +21,8 @@ Rails.application.configure do
     :address        => "smtp.gmail.com",
     :port           => 587,
     :authentication => :plain,
-    :user_name      => ENV['smtp_username'],
-    :password       => ENV['smtp_password'],
+    :user_name      => ENV['SMTP_USERNAME'],
+    :password       => ENV['SMTP_PASSWORD'],
     :openssl_verify_mode  => 'none'
   }
 

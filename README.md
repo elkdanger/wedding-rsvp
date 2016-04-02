@@ -1,7 +1,7 @@
 # wedding-rsvp
 A site for wedding guests to send RSVPs
 
-[![Build status](https://travis-ci.org/thehobbs/wedding-rsvp.svg?branch=master)](https://travis-ci.org/thehobbs/wedding-rsvp) 
+[![Build status](https://travis-ci.org/thehobbs/wedding-rsvp.svg?branch=master)](https://travis-ci.org/thehobbs/wedding-rsvp)
 [![Code
 Climate](https://codeclimate.com/github/thehobbs/wedding-rsvp/badges/gpa.svg)](https://codeclimate.com/github/thehobbs/wedding-rsvp)
 [![Test
@@ -32,3 +32,14 @@ After getting latest, run `$ npm install` to bring down any possible new node pa
 * [Rails Development Server](http://localhost:3000)
 * [Rails server with BrowserSync](http://localhost:3001) _if the server has been started with `$ gulp server`_
 * [BrowserSync control panel](http://localhost:3002)
+
+## SMTP settings
+
+STMP settings for the site can be specified for local environments by creating a file called `.env` in the root, and specifying the following keys:
+
+````
+SMTP_USERNAME=<your smtp username>
+SMTP_PASSWORD=<your smtp password>
+````
+
+This file should not be committed to the repository.
