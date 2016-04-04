@@ -37,6 +37,9 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'pry'
   gem "codeclimate-test-reporter"
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem "selenium-webdriver"
 end
 
 group :production do
