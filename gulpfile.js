@@ -48,7 +48,8 @@ function bundleFile(file) {
 }
 
 function bundle() {
-    let files = ['app', 'rsvps']
+
+    let files = ['app']
 
     files.forEach(bundleFile)
 }

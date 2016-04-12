@@ -2,6 +2,7 @@ defaults: &defaults
   enable_gallery: true
   enable_comments: true
   comments_disqus_pageid: 'jdsoo89eorl'
+  show_booking_info: true
 
 development:
   <<: *defaults
