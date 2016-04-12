@@ -17,8 +17,17 @@
               <li><i class="fa fa-check"></i> Free Car Parking</li>
               <li><i class="fa fa-check"></i> Non-smoking</li>
               <li><i class="fa fa-check"></i> Laundry service</li>
-
             </ul>
+
+            <% if APP_CONFIG[:show_booking_info] %>
+              <p>
+                If you would like to stay at the hotel for the duration of the wedding, please let us
+                know when you return your RSVP, including what type of room you'd like and for how many nights.
+              </p>
+
+              <%= render "tariffs" %>
+            <% end %>
+
           </div><!--//event-col-->
         </div><!--//row-->
       </div><!--//modal-body-->

@@ -71,6 +71,19 @@
             <div class="message-group col-md-12 col-sm-12 col-xs-12 form-group">
               <div class="form-group-inner">
                 <label for="cmessage">Additional Information</label>
+
+                <% if APP_CONFIG[:show_booking_info] %>
+                  <p class="help-block">We still have some rooms available at the hotel over the wedding weekend. If you would like
+                  to book one for one or two nights, please let us know here, including which type of room and for how many nights.</p>
+                  <p class="help-block">There is a discount of £15 for single occupancy.</p>
+
+                  <p><a href="#tariffs" data-toggle="collapse">Show tariffs</a></p>
+
+                  <div id="tariffs" class="collapse">
+                    <%= render "tariffs" %>
+                  </div>
+                <% end %>
+
                 <textarea class="form-control" id="cmessage" name="rsvp[message]" placeholder="eg. Vegetarian &amp; dietary requests"></textarea>
               </div>
             </div>
